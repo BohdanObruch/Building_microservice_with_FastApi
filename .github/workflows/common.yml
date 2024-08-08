@@ -7,8 +7,8 @@ jobs:
   common-tests:
     runs-on: ubuntu-latest
     env:
-      POSTGRES_USER: ci
-      POSTGRES_PASSWORD: ci
+      POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+      POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
